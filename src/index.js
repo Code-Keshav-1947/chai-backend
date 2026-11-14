@@ -11,7 +11,7 @@ dotenv.config({
 connectDB()
 .then(() => {
     app.listen(process.env.PORT || 8000, () => {
-        console.log(`⚙️ Server is running at port : ${process.env.PORT}`);
+        console.log(`⚙️ Server is running at port : ${process.env.PORT} \n\n http://localhost:${process.env.PORT || 8000}/api/v1/healthcheck \n\n`);
     })
 })
 .catch((err) => {
